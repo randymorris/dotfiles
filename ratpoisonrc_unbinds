@@ -1,0 +1,49 @@
+# .ratpoisonrc.unbinds
+#
+# Remove all the crappy default binds from ratpoison's config
+#
+# Randy Morris (randy.morris archlinux.us)
+#
+# CREATED:  2009-12-13 21:50
+# MODIFIED: 2009-12-13 21:50
+
+unbind C-F14
+unbind C-g
+unbind C-A
+unbind C-K
+unbind Return
+unbind C-Return
+unbind C-a
+unbind b
+unbind C-b
+unbind exclaim
+unbind C-exclaim
+unbind C-info
+unbind C-k
+unbind C-m
+unbind C-n
+unbind C-p
+unbind apostrophe
+unbind C-apostrophe
+unbind space
+unbind C-space
+unbind v
+unbind C-v
+unbind V
+unbind C-V
+unbind w
+unbind C-w
+unbind M-Tab
+unbind C-Left
+unbind C-Right
+unbind C-Up
+unbind C-Down
+unbind Q
+unbind C-r
+unbind C-underscore
+unbind C-u
+unbind U
+unbind x
+unbind C-x
+
+# vim:ft=ratpoison

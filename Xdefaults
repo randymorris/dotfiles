@@ -1,0 +1,79 @@
+! .Xdefaults - X server resource file
+!
+! Randy Morris (rson451@gmail.com)
+!
+! CREATED:  2008-06-01 08:00
+! MODIFIED: 2009-12-09 18:02
+
+!urxvt settings {{{
+URxvt*font:             xft:Monaco:size=11:antialias=true
+URxvt*background:       #1c1c1c
+URxvt*foreground:       #cccccc
+URxvt*scrollBar:        false
+URxvt*perl-lib:         /home/randy/.urxvt/
+URxvt*perl-ext-common:  default,matcher
+URxvt*perl-ext:         selection,mark-yank-urls
+URxvt*urlLauncher:      /usr/bin/firefox
+URxvt*cutchars:         ``'",;@&*=|?()<>[]{}
+URxvt*matcher.button:   1
+URxvt*transparent:      false
+URxvt*tintColor:        #403628
+URxvt.shading:          75
+URxvt*termName:         rxvt-256color
+URxvt*urgentOnBell:     true
+quiet*urgentOnBell:     false
+URxvt*underlineURLs:    true
+URxvt*keysym.M-u:       perl:mark-yank-urls:activate_mark_mode
+!}}}
+
+!xterm settings {{{
+xterm*font:             -*-bitstream vera sans mono-medium-r-*-*-12-*-*-*-*-*-*-*
+xterm*termName:         xterm
+xterm*background:       #000000
+xterm*foreground:       #cccccc
+xterm*scrollBar:        false
+!}}}
+
+!xft settings {{{
+xft*dpi:                96
+xft*antialias:          true
+xft*rgba:               rgb
+xft*hinting:            true
+!}}}
+
+!colors {{{
+!black
+*color0:  #222222
+*color8:  #454545
+
+!red
+*color1:  #8E5C4E
+*color9:  #CC896D
+
+!green
+*color2:  #6C7E55
+*color10: #C4DF90
+
+!yellow
+*color3:  #B89F63
+*color11: #FFE080
+
+!blue
+*color4:  #4682b4
+*color12: #6495ed
+
+!magenta
+*color5:  #956D9D
+*color13: #C18FCB
+
+!cyan
+*color6:  #4c8ea1
+*color14: #6bc1d0
+
+!white
+*color7:  #cccccc
+*color15: #ffffff
+
+!}}}
+
+! vim:foldmethod=marker:foldmarker={{{,}}}:foldlevel=0

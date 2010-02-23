@@ -1,0 +1,90 @@
+# .ratpoisonrc - ratpoison runtime configuration
+#
+# Randy Morris (rson451@gmail.com)
+#
+# CREATED:  2009-09-30 22:17
+# MODIFIED: 2009-12-23 21:12
+#
+
+# globals
+startup_message off
+msgwait 3
+escape F14
+
+# settings
+set bargravity c
+set barborder 2
+set barpadding 4 4
+set fgcolor #808080
+set fwcolor #808080
+set bgcolor #1c1c1c
+set bwcolor #000000
+set font Monaco:11
+set inputwidth 420
+set border 1
+set resizeunit 25
+set winname class
+
+# general
+bind c kill
+bind Escape banish
+bind u undo
+bind C-r redo
+
+# screens
+bind N nextscreen
+bind P prevscreen
+
+# groups
+bind s-backslash groups
+bind F1 exec ratpoison -c "gselect 0" -c "select -" -c "next"
+bind F2 exec ratpoison -c "gselect 1" -c "select -" -c "next"
+
+# windows
+bind backslash windows
+bind 1 select 0
+bind 2 select 1
+bind 3 select 2
+bind 4 select 3
+bind 5 select 4
+bind 6 select 5
+bind 7 select 6
+bind 8 select 7
+bind 9 select 8
+bind 0 select 9
+
+# frames
+bind O only
+bind R remove
+bind f fselect
+bind F curframe
+bind k focusup
+bind l focusright
+bind j focusdown
+bind h focusleft
+bind K exchangeup
+bind L exchangeright
+bind J exchangedown
+bind H exchangeleft
+
+# commands
+bind colon colon
+bind semicolon colon ! 
+bind s-semicolon colon exec term -e 
+
+# aliases
+alias sp split
+alias vsp hsplit
+alias ! exec
+
+# unbind stuff
+exec ratpoison -c 'source .ratpoisonrc.unbinds' &
+
+# auto exec
+exec xmodmap -e "keycode 64 = F14" &
+exec unclutter -idle 5 -jitter 2 -root &
+exec xsetroot -solid '#1c1c1c' -cursor_name left_ptr &
+exec ratpoison -c 'gnew other' -c 'gselect 0' -c 'banish' -c 'exec term' -c 'next' &
+
+
+# vim:foldlevel=1

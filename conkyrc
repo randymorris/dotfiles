@@ -1,0 +1,21 @@
+use_xft yes
+xftfont Consolas:size=9:autohinting=true
+draw_borders no 
+own_window yes
+own_window_type override 
+own_window_colour 403728
+minimum_size 1676 11 
+default_color b09161
+double_buffer yes
+draw_shades no
+draw_outlines no
+alignment bottom_left
+update_interval 5
+gap_x 0
+gap_y 0
+color1 b09161
+color2 f6e2a7
+color3 444444
+border_inner_margin 0
+TEXT
+${if_up wlan0} ${color1}signal: ${color2}${font webdings:pixelsize=11}${exec /home/randy/bin/wireless-status.sh}${font} ${color3}|$endif ${color1}batt:${color2} ${battery_percent}% ${color3}|${color1} gov: ${color2}${exec cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor} ${color3}|${color1} cpu:${color2} $cpu%${alignr} ${color1}updates: ${color2}${texeci 10 /home/randy/bin/check_updates.sh} 

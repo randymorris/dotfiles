@@ -1,0 +1,23 @@
+! Multimedia keys
+keycode 174 = XF86AudioLowerVolume
+keycode 176 = XF86AudioRaiseVolume
+keycode 162 = XF86AudioPlay
+keycode 164 = XF86AudioStop
+keycode 160 = XF86AudioMute
+keycode 144 = XF86AudioPrev
+keycode 153 = XF86AudioNext
+
+! Get rid of stupid ass menu key
+keycode 117 =
+
+! CapsLock is F13
+clear lock
+keycode 66 = F13
+
+! Swap mod1 and mod4
+remove mod1 = Alt_L
+remove mod4 = Super_L
+keycode 64 = Super_L
+keycode 115 = Alt_L
+add mod1 = Alt_L
+add mod4 = Super_L

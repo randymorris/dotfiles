@@ -1,0 +1,9 @@
+set guioptions-=m
+set complete=l
+set wildoptions=auto
+set focuscontent
+set laststatus=2
+set showmode
+set showstatuslinks=2
+set showtabline=0
+set editor='urxvt -name "Grand Paradiso" -e vim'
