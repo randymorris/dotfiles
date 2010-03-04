@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-01-27 15:06
+# MODIFIED: 2010-03-03 10:13
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
 #       See http://rsontech.net/dotfiles/server/.screenrc
@@ -37,13 +37,9 @@ alias sudo='command sudo '
 alias shop='shop --pad 12'
 alias gmutt='mutt -F $HOME/.muttrc.personal'
 alias gitt='git ls-files -toc'
+alias .f='cd ~/.config/dotfiles/'
 
 $(which pacman-color &> /dev/null ) && alias pacman='pacman-color'
-
-# cheap ones
-alias pkgs='cd ~/pkgs'
-alias dev='cd ~/dev'
-alias www='cd ~http/rsontech.net/'
 #}}}
 
 # functions {{{
