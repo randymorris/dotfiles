@@ -3,10 +3,10 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-03-03 10:13
+# MODIFIED: 2010-03-11 15:05
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
-#       See http://rsontech.net/dotfiles/server/.screenrc
+#       See http://rsontech.net/dotfiles/screenrc
 #
 
 # simple settings {{{
@@ -118,9 +118,7 @@ chpwd(){ #{{{
     set-prompt
 
     if [ -d ".git" ]; then
-        if [[ ! $(git config --get remote.origin.url) =~ '/srv/git/dotfiles.git' ]]; then
-            git status
-        fi
+        git status
     fi
     ls
 }
