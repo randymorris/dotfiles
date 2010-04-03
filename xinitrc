@@ -1,6 +1,7 @@
 #!/bin/bash
 
 exec /usr/bin/xmodmap ${HOME}/.Xmodmap &
+exec urxvtd -o &
 
 if [[ $1 == "flux" ]]
 then
@@ -12,5 +13,5 @@ elif [[ $1 == "windows" ]]
 then
   exec ~/bin/startwinxp
 else
-  exec ~/bin/startrp
+  exec /usr/bin/ratpoison
 fi
