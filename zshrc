@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-03-11 15:05
+# MODIFIED: 2010-04-03 11:40
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
 #       See http://rsontech.net/dotfiles/screenrc
@@ -181,5 +181,10 @@ set-mode INSERT
 set-prompt
 
 zle -N zle-keymap-select
+
+# launch X if logged into TTY1
+if [[ $TTY == /dev/tty1 ]]; then
+    exec /usr/bin/xinit
+fi
 
 # vim:foldlevel=0
