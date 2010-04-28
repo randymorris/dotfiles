@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-03-11 15:05
+# MODIFIED: 2010-04-15 19:33
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
 #       See http://rsontech.net/dotfiles/screenrc
@@ -14,10 +14,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
-autoload -Uz compinit
 autoload -U colors && colors
-compinit
-zstyle :compinstall filename '/home/randy/.zshrc'
 setopt nobeep nohistbeep nolistbeep
 
 #}}}
