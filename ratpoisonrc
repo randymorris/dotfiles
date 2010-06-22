@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  2009-09-30 22:17
-# MODIFIED: 2010-04-03 11:39
+# MODIFIED: 2010-06-21 21:20
 #
 
 # globals
@@ -33,13 +33,15 @@ bind u undo
 bind C-r redo
 
 # screens
-bind N nextscreen
-bind P prevscreen
+bind Right nextscreen
+bind Left prevscreen
 
 # groups
 bind s-backslash groups
 bind F1 exec ratpoison -c "gselect 0" -c "select -" -c "next"
 bind F2 exec ratpoison -c "gselect 1" -c "select -" -c "next"
+bind F3 exec ratpoison -c "gselect 2" -c "select -" -c "next"
+bind F4 exec ratpoison -c "gselect 3" -c "select -" -c "next"
 
 # windows
 bind backslash windows
@@ -67,6 +69,7 @@ bind K exchangeup
 bind L exchangeright
 bind J exchangedown
 bind H exchangeleft
+bind N focus
 
 # commands
 bind colon colon
@@ -85,7 +88,6 @@ exec ratpoison -c 'source .ratpoisonrc.unbinds' &
 exec xmodmap -e "keycode 64 = F14" &
 exec unclutter -idle 5 -jitter 2 -root &
 exec xsetroot -solid '#1c1c1c' -cursor_name left_ptr &
-exec ratpoison -c 'gnew other' -c 'gselect 0' -c 'banish' -c 'exec term' -c 'next' &
-
+exec ratpoison -c 'gnew two' -c 'gnew three' -c 'gnew four' -c 'gselect 0' -c 'banish' -c 'exec term' -c 'next' &
 
 # vim:foldlevel=1

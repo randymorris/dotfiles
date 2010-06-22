@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-04-03 11:40
+# MODIFIED: 2010-06-21 21:21
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
 #       See http://rsontech.net/dotfiles/screenrc
@@ -14,10 +14,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
-autoload -Uz compinit
 autoload -U colors && colors
-compinit
-zstyle :compinstall filename '/home/randy/.zshrc'
 setopt nobeep nohistbeep nolistbeep
 
 #}}}
@@ -38,6 +35,7 @@ alias shop='shop --pad 12'
 alias gmutt='mutt -F $HOME/.muttrc.personal'
 alias gitt='git ls-files -toc'
 alias .f='cd ~/.config/dotfiles/'
+alias pyc='find . -name "*.pyc" -delete'
 
 $(which pacman-color &> /dev/null ) && alias pacman='pacman-color'
 #}}}

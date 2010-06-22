@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  2009-09-28 12:12
-# MODIFIED: 2010-02-22 10:41
+# MODIFIED: 2010-05-25 12:49
 #
 
 [settings]
@@ -22,7 +22,7 @@ red:          1;31
 green:        1;32
 yellow:       1;33
 blue:         1;34
-magenta:      2;35
+magenta:      1;35
 cyan:         1;36
 white:        1;37
 
