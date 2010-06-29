@@ -10,9 +10,9 @@ keycode 153 = XF86AudioNext
 ! Get rid of stupid ass menu key
 keycode 117 =
 
-! CapsLock is F13
-clear lock
-keycode 66 = F13
+! Make capslock useful
+remove Lock = Caps_Lock
+keysym Caps_Lock = Escape
 
 ! Swap mod1 and mod4
 remove mod1 = Alt_L

@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  2009-09-30 22:17
-# MODIFIED: 2010-06-07 07:05
+# MODIFIED: 2010-06-21 21:20
 #
 
 # globals
@@ -24,6 +24,7 @@ set inputwidth 420
 set border 1
 set resizeunit 25
 set winname class
+set wingravity c
 
 # general
 bind c kill

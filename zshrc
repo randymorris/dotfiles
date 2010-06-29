@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-06-08 13:29
+# MODIFIED: 2010-06-21 21:22
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
 #       See http://rsontech.net/dotfiles/screenrc
@@ -43,16 +43,16 @@ $(which pacman-color &> /dev/null ) && alias pacman='pacman-color'
 # functions {{{
 
 atop(){ #{{{
-	SHOW=10
-	DELAY=3;
+    SHOW=10
+    DELAY=3;
 
-	if [ $1 ]; then
-		SHOW=$1
-		if [ $2 ]; then
-			DELAY=$2
-		fi
-	fi
-	watch -n $DELAY "free; echo; uptime; echo; ps aux  --sort=-%cpu | head -n $(($SHOW+1)); echo; who"
+    if [ $1 ]; then
+        SHOW=$1
+        if [ $2 ]; then
+            DELAY=$2
+        fi
+    fi
+    watch -n $DELAY "free; echo; uptime; echo; ps aux  --sort=-%cpu | head -n $(($SHOW+1)); echo; who"
 }
 #}}}
 
@@ -179,5 +179,10 @@ set-mode INSERT
 set-prompt
 
 zle -N zle-keymap-select
+
+# launch X if logged into TTY1
+if [[ $TTY == /dev/tty1 ]]; then
+    exec /usr/bin/xinit
+fi
 
 # vim:foldlevel=0
