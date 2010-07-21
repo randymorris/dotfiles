@@ -16,3 +16,6 @@
 [submodule "vim/plugin-git/indent_object"]
 	path = vim/plugin-git/indent_object
 	url = http://github.com/michaeljsmith/vim-indent-object.git
+[submodule "vim/plugin-git/conque"]
+	path = vim/plugin-git/conque
+	url = http://github.com/str1ngs/conque.git
