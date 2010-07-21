@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-06-21 21:22
+# MODIFIED: 2010-07-21 12:32
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
 #       See http://rsontech.net/dotfiles/screenrc
@@ -29,13 +29,13 @@ export EDITOR=/usr/bin/vim
 alias ls='ls --color=auto'
 alias tree='tree -L 1 -C'
 alias :q='exit'
-alias gist='pygist -a'
 alias sudo='command sudo '
 alias shop='shop --pad 12'
 alias gmutt='mutt -F $HOME/.muttrc.personal'
 alias gitt='git ls-files -toc'
 alias .f='cd ~/.config/dotfiles/'
 alias pyc='find . -name "*.pyc" -delete'
+alias tmux='tmux -2'
 
 $(which pacman-color &> /dev/null ) && alias pacman='pacman-color'
 #}}}
