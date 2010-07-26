@@ -18,4 +18,4 @@
 	url = http://github.com/michaeljsmith/vim-indent-object.git
 [submodule "vim/plugin-git/conque"]
 	path = vim/plugin-git/conque
-	url = http://github.com/str1ngs/conque.git
+	url = http://github.com/rson/vim-conque.git
