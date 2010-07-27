@@ -19,3 +19,6 @@
 [submodule "vim/plugin-git/conque"]
 	path = vim/plugin-git/conque
 	url = http://github.com/rson/vim-conque.git
+[submodule "vim/plugin-git/supertab"]
+	path = vim/plugin-git/supertab
+	url = http://github.com/ervandew/supertab.git
