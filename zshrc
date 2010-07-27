@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-07-21 12:32
+# MODIFIED: 2010-07-27 15:06
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
 #       See http://rsontech.net/dotfiles/screenrc
@@ -14,6 +14,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
+autoload -U compinit && compinit
 autoload -U colors && colors
 setopt nobeep nohistbeep nolistbeep
 
