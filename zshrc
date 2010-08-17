@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-07-27 15:06
+# MODIFIED: 2010-08-10 16:15
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
 #       See http://rsontech.net/dotfiles/screenrc
@@ -83,70 +83,53 @@ set-title(){ #{{{
 }
 #}}}
 
-set-hardstatus(){ #{{{
-    if [[ $* == "zsh" ]]; then
-        printf '\e_%s\e\' $VIMODE
-    else
-        printf '\e_\e\'
-    fi
-}
-#}}}
-
 preexec(){ #{{{
     #if [[ -n $STY ]]; then
     if [[ $TERM =~ "screen" ]]; then
         TITLE=${$(echo $3 | sed -r 's/^command sudo ([^ ]*) .*/\1/;tx;s/^([^ ]*) +.*/\1/;s/^([^ ]*)$/\1/;:x;q')/#*\/}
         set-title $TITLE
-        set-hardstatus $TITLE
     fi
 }
 #}}}
 
 precmd(){ #{{{
     set-prompt
-    #if [[ -n $STY ]]; then
     if [[ $TERM =~ "screen" ]]; then
         TITLE=${0/#*\/}
         set-title $TITLE
-        set-hardstatus $TITLE
     fi
 }
 #}}}
 
 chpwd(){ #{{{
     set-prompt
-
-    if [ -d ".git" ]; then
-        git status
-    fi
     ls
 }
 #}}}
 
-set-mode(){  #{{{
-    VIMODE='--'$1'--'
-    set-hardstatus $TITLE
-}
-#}}}
-
 set-prompt(){ #{{{
-    if [[ $HOST == 'banks' ]]; then
-        PS1="%{$fg_no_bold[white]%}%~ %(?.%{$fg_no_bold[green]%}>%{$fg_bold[green]%}>%{$fg_bold[yellow]%}>.%{$fg_no_bold[magenta]%}>%{$fg_bold[red]%}>%{$fg_bold[magenta]%}>)%{$reset_color%} "
-        RPROMPT="%(?.%{$fg_bold[yellow]%}<%{$fg_bold[green]%}<%{$fg_no_bold[green]%}<.%{$fg_bold[magenta]%}<%{$fg_bold[red]%}<%{$fg_no_bold[magenta]%}<) %{$fg_no_bold[white]%}%n@%m%{$reset_color%}"
-    else
-        PS1="%{$fg_no_bold[white]%}%~ %(?.%{$fg_no_bold[cyan]%}>%{$fg_no_bold[blue]%}>%{$fg_bold[cyan]%}>.%{$fg_no_bold[magenta]%}>%{$fg_bold[red]%}>%{$fg_bold[magenta]%}>)%{$reset_color%} "
-        RPROMPT="%(?.%{$fg_bold[cyan]%}<%{$fg_no_bold[blue]%}<%{$fg_no_bold[cyan]%}<.%{$fg_bold[magenta]%}<%{$fg_bold[red]%}<%{$fg_no_bold[magenta]%}<) %{$fg_no_bold[white]%}%n@%m%{$reset_color%}"
-    fi
-}
-#}}}
+    git-prompt
+    PS1="%{$fg_no_bold[white]%}%~ $GIT_PROMPT%(?.%{$fg_no_bold[green]%}>%{$fg_bold[green]%}>%{$fg_bold[yellow]%}>.%{$fg_no_bold[magenta]%}>%{$fg_bold[red]%}>%{$fg_bold[magenta]%}>)%{$reset_color%} "
+    RPROMPT="%(?.%{$fg_bold[yellow]%}<%{$fg_bold[green]%}<%{$fg_no_bold[green]%}<.%{$fg_bold[magenta]%}<%{$fg_bold[red]%}<%{$fg_no_bold[magenta]%}<) %{$fg_no_bold[white]%}%n@%m%{$reset_color%}"
+} #}}}
 
-zle-keymap-select(){ #{{{
-    if [[ $KEYMAP == vicmd ]]; then
-        set-mode NORMAL
+git-prompt(){
+    if [ -d .git ]; then
+        _git_branch=$(git branch | grep \* | cut -d' ' -f2)
+        _git_upstream=''
+
+        # only do this if it's easy
+        git_revs=($(git rev-list --count --left-right "@{upstream}"...HEAD 2>/dev/null))
+        if [ $? -eq 0 ]; then
+            [[ $git_revs[2] != "0" ]] && _git_upstream+=":+$git_revs[2]"
+            [[ $git_revs[1] != "0" ]] && _git_upstream+=":-$git_revs[1]"
+        fi
+        GIT_PROMPT="(${_git_branch}${_git_upstream}) "
     else
-        set-mode INSERT
+        unset GIT_PROMPT
     fi
 }
+
 #}}}
 
 #}}}
@@ -176,10 +159,7 @@ bindkey "^J" push-line
 bindkey '^R' history-incremental-search-backward
 #}}}
 
-set-mode INSERT
 set-prompt
-
-zle -N zle-keymap-select
 
 # launch X if logged into TTY1
 if [[ $TTY == /dev/tty1 ]]; then
