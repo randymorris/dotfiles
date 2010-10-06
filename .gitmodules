@@ -22,3 +22,6 @@
 [submodule "vim/plugin-git/supertab"]
 	path = vim/plugin-git/supertab
 	url = http://github.com/ervandew/supertab.git
+[submodule "vim/plugin-git/nerdcommenter"]
+	path = vim/plugin-git/nerdcommenter
+	url = http://github.com/scrooloose/nerdcommenter.git
