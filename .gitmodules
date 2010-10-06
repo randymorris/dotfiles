@@ -1,18 +1,18 @@
 [submodule "vim/plugin-git/delimitmate"]
 	path = vim/plugin-git/delimitmate
-	url = git://github.com/Raimondi/delimitMate.git
+	url = http://github.com/Raimondi/delimitMate.git
 [submodule "vim/plugin-git/taglist"]
 	path = vim/plugin-git/taglist
-	url = git://github.com/esukram/taglist.vim.git
+	url = http://github.com/esukram/taglist.vim.git
 [submodule "vim/plugin-git/snipmate"]
 	path = vim/plugin-git/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
+	url = http://github.com/msanders/snipmate.vim.git
 [submodule "vim/plugin-git/nerdtree"]
 	path = vim/plugin-git/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
+	url = http://github.com/scrooloose/nerdtree.git
 [submodule "vim/plugin-git/markdown"]
 	path = vim/plugin-git/markdown
-	url = git://github.com/tpope/vim-markdown.git
+	url = http://github.com/tpope/vim-markdown.git
 [submodule "vim/plugin-git/indent_object"]
 	path = vim/plugin-git/indent_object
 	url = http://github.com/michaeljsmith/vim-indent-object.git
