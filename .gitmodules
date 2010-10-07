@@ -25,3 +25,9 @@
 [submodule "vim/plugin-git/nerdcommenter"]
 	path = vim/plugin-git/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/plugin-git/pathogen"]
+	path = vim/plugin-git/pathogen
+	url = http://github.com/tpope/vim-pathogen.git
+[submodule "vim/plugin-git/matchit"]
+	path = vim/plugin-git/matchit
+	url = http://github.com/vim-scripts/matchit.zip.git
