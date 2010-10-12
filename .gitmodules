@@ -1,33 +1,44 @@
 [submodule "vim/plugin-git/delimitmate"]
 	path = vim/plugin-git/delimitmate
 	url = http://github.com/Raimondi/delimitMate.git
+	ignore = untracked
 [submodule "vim/plugin-git/taglist"]
 	path = vim/plugin-git/taglist
 	url = http://github.com/esukram/taglist.vim.git
+	ignore = untracked
 [submodule "vim/plugin-git/snipmate"]
 	path = vim/plugin-git/snipmate
 	url = http://github.com/msanders/snipmate.vim.git
+	ignore = untracked
 [submodule "vim/plugin-git/nerdtree"]
 	path = vim/plugin-git/nerdtree
 	url = http://github.com/scrooloose/nerdtree.git
+	ignore = untracked
 [submodule "vim/plugin-git/markdown"]
 	path = vim/plugin-git/markdown
 	url = http://github.com/tpope/vim-markdown.git
+	ignore = untracked
 [submodule "vim/plugin-git/indent_object"]
 	path = vim/plugin-git/indent_object
 	url = http://github.com/michaeljsmith/vim-indent-object.git
+	ignore = untracked
 [submodule "vim/plugin-git/conque"]
 	path = vim/plugin-git/conque
 	url = http://github.com/rson/vim-conque.git
+	ignore = untracked
 [submodule "vim/plugin-git/supertab"]
 	path = vim/plugin-git/supertab
 	url = http://github.com/ervandew/supertab.git
+	ignore = untracked
 [submodule "vim/plugin-git/nerdcommenter"]
 	path = vim/plugin-git/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
+	ignore = untracked
 [submodule "vim/plugin-git/pathogen"]
 	path = vim/plugin-git/pathogen
 	url = http://github.com/tpope/vim-pathogen.git
+	ignore = untracked
 [submodule "vim/plugin-git/matchit"]
 	path = vim/plugin-git/matchit
 	url = http://github.com/vim-scripts/matchit.zip.git
+	ignore = untracked
