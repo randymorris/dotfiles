@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-08-10 16:15
+# MODIFIED: 2010-10-14 10:21
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
 #       See http://rsontech.net/dotfiles/screenrc
@@ -58,21 +58,25 @@ atop(){ #{{{
 #}}}
 
 todo(){ #{{{
+  todo_file=$HOME/.todo
   if [ -z $1 ]; then
-    awk '{ i += 1; print i": "$0 }' $HOME/.todo
+    awk '{ i += 1; print i": "$0 }' $todo_file
     return
   fi
 
   case $1 in
-    "add")
-      echo $2 >> $HOME/.todo
+    add|a|-a)
+      echo $2 >> $todo_file
     ;;
-    "del")
-      todo=$(< $HOME/.todo | sed "$2"'d')
-      echo $todo > $HOME/.todo
+    del|d|-d)
+      if [ -z $2 ]; then
+        read -q "reply?clear entire todo list? [y|N] "
+        [ $reply = 'y' ] || return
+      fi
+      sed -i "$2d" $todo_file
     ;;
-    "search")
-      grep -ni --color=never $2 $HOME/.todo | sed -e 's/:/: /'
+    search|s|-s)
+      grep -ni --color=never $2 $todo_file | sed -e 's/:/: /'
     ;;
   esac
 }
