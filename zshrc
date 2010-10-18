@@ -113,7 +113,7 @@ set-prompt(){ #{{{
     RPROMPT="%(?.%{$fg_bold[yellow]%}<%{$fg_bold[green]%}<%{$fg_no_bold[green]%}<.%{$fg_bold[magenta]%}<%{$fg_bold[red]%}<%{$fg_no_bold[magenta]%}<) %{$fg_no_bold[white]%}%n@%m%{$reset_color%}"
 } #}}}
 
-git-prompt(){
+git-prompt(){ #{{{
     if [ -d .git ]; then
         _git_branch=$(git branch | grep \* | cut -d' ' -f2)
         _git_upstream=''
@@ -129,7 +129,6 @@ git-prompt(){
         unset GIT_PROMPT
     fi
 }
-
 #}}}
 
 #}}}
