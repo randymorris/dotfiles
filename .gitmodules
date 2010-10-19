@@ -42,3 +42,7 @@
 	path = vim/plugin-git/matchit
 	url = http://github.com/vim-scripts/matchit.zip.git
 	ignore = untracked
+[submodule "vim/plugin-git/gundo"]
+	path = vim/plugin-git/gundo
+	url = http://github.com/sjl/gundo.vim.git
+	ignore = untracked
