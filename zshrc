@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-10-14 10:21
+# MODIFIED: 2010-10-23 18:38
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
 #       See http://rsontech.net/dotfiles/screenrc
@@ -119,16 +119,17 @@ set-prompt(){ #{{{
 
 git-prompt(){ #{{{
     if [ -d .git ]; then
-        _git_branch=$(git branch | grep \* | cut -d' ' -f2)
-        _git_upstream=''
+        git_ref=$(git symbolic-ref HEAD 2>/dev/null)
+        git_branch=${git_ref#refs/heads/}
+        git_upstream=''
 
         # only do this if it's easy
         git_revs=($(git rev-list --count --left-right "@{upstream}"...HEAD 2>/dev/null))
         if [ $? -eq 0 ]; then
-            [[ $git_revs[2] != "0" ]] && _git_upstream+=":+$git_revs[2]"
-            [[ $git_revs[1] != "0" ]] && _git_upstream+=":-$git_revs[1]"
+            [[ $git_revs[2] != "0" ]] && git_upstream+=":+$git_revs[2]"
+            [[ $git_revs[1] != "0" ]] && git_upstream+=":-$git_revs[1]"
         fi
-        GIT_PROMPT="(${_git_branch}${_git_upstream}) "
+        GIT_PROMPT="(${git_branch}${git_upstream}) "
     else
         unset GIT_PROMPT
     fi
