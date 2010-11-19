@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-10-23 18:38
+# MODIFIED: 2010-11-15 09:12
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
 #       See http://rsontech.net/dotfiles/screenrc
@@ -35,7 +35,7 @@ alias shop='shop --pad 12'
 alias gmutt='mutt -F $HOME/.muttrc.personal'
 alias gitt='git ls-files -toc'
 alias .f='cd ~/.config/dotfiles/'
-alias pyc='find . -name "*.pyc" -delete'
+alias pyc='find . -name "*.pyc" -delete; ls'
 alias tmux='tmux -2'
 
 $(which pacman-color &> /dev/null ) && alias pacman='pacman-color'
