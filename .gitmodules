@@ -1,48 +1,47 @@
-[submodule "vim/plugin-git/delimitmate"]
-	path = vim/plugin-git/delimitmate
-	url = http://github.com/Raimondi/delimitMate.git
-	ignore = untracked
-[submodule "vim/plugin-git/taglist"]
-	path = vim/plugin-git/taglist
+[submodule "vim/bundle/taglist"]
+	path = vim/bundle/taglist
 	url = http://github.com/esukram/taglist.vim.git
 	ignore = untracked
-[submodule "vim/plugin-git/snipmate"]
-	path = vim/plugin-git/snipmate
-	url = http://github.com/msanders/snipmate.vim.git
-	ignore = untracked
-[submodule "vim/plugin-git/nerdtree"]
-	path = vim/plugin-git/nerdtree
-	url = http://github.com/scrooloose/nerdtree.git
-	ignore = untracked
-[submodule "vim/plugin-git/markdown"]
-	path = vim/plugin-git/markdown
-	url = http://github.com/tpope/vim-markdown.git
-	ignore = untracked
-[submodule "vim/plugin-git/indent_object"]
-	path = vim/plugin-git/indent_object
+[submodule "vim/bundle/indent_object"]
+	path = vim/bundle/indent_object
 	url = http://github.com/michaeljsmith/vim-indent-object.git
 	ignore = untracked
-[submodule "vim/plugin-git/conque"]
-	path = vim/plugin-git/conque
-	url = http://github.com/rson/vim-conque.git
-	ignore = untracked
-[submodule "vim/plugin-git/supertab"]
-	path = vim/plugin-git/supertab
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
 	url = http://github.com/ervandew/supertab.git
 	ignore = untracked
-[submodule "vim/plugin-git/nerdcommenter"]
-	path = vim/plugin-git/nerdcommenter
-	url = http://github.com/scrooloose/nerdcommenter.git
-	ignore = untracked
-[submodule "vim/plugin-git/pathogen"]
-	path = vim/plugin-git/pathogen
+[submodule "vim/bundle/pathogen"]
+	path = vim/bundle/pathogen
 	url = http://github.com/tpope/vim-pathogen.git
 	ignore = untracked
-[submodule "vim/plugin-git/matchit"]
-	path = vim/plugin-git/matchit
-	url = http://github.com/vim-scripts/matchit.zip.git
+[submodule "vim/bundle/markdown"]
+	path = vim/bundle/markdown
+	url = http://github.com/tpope/vim-markdown.git
 	ignore = untracked
-[submodule "vim/plugin-git/gundo"]
-	path = vim/plugin-git/gundo
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
+	url = http://github.com/msanders/snipmate.vim.git
+	ignore = untracked
+[submodule "vim/bundle/gundo"]
+	path = vim/bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
 	ignore = untracked
+[submodule "vim/bundle/delimitmate"]
+	path = vim/bundle/delimitmate
+	url = http://github.com/Raimondi/delimitMate.git
+	ignore = untracked
+[submodule "vim/bundle/conque"]
+	path = vim/bundle/conque
+	url = http://github.com/rson/vim-conque.git
+	ignore = untracked
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = http://github.com/scrooloose/nerdcommenter.git
+	ignore = untracked
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = http://github.com/scrooloose/nerdtree.git
+	ignore = untracked
+[submodule "vim/bundle/matchit"]
+	path = vim/bundle/matchit
+	url = http://github.com/vim-scripts/matchit.zip.git
