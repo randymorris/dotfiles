@@ -1,11 +1,3 @@
-[submodule "vim/bundle/taglist"]
-	path = vim/bundle/taglist
-	url = http://github.com/esukram/taglist.vim.git
-	ignore = untracked
-[submodule "vim/bundle/indent_object"]
-	path = vim/bundle/indent_object
-	url = http://github.com/michaeljsmith/vim-indent-object.git
-	ignore = untracked
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = http://github.com/ervandew/supertab.git
@@ -26,22 +18,11 @@
 	path = vim/bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
 	ignore = untracked
-[submodule "vim/bundle/delimitmate"]
-	path = vim/bundle/delimitmate
-	url = http://github.com/Raimondi/delimitMate.git
-	ignore = untracked
-[submodule "vim/bundle/conque"]
-	path = vim/bundle/conque
-	url = http://github.com/rson/vim-conque.git
-	ignore = untracked
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
 	ignore = untracked
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = http://github.com/scrooloose/nerdtree.git
-	ignore = untracked
 [submodule "vim/bundle/matchit"]
 	path = vim/bundle/matchit
 	url = http://github.com/vim-scripts/matchit.zip.git
+	ignore = untracked
