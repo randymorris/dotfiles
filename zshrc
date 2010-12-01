@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-11-15 09:12
+# MODIFIED: 2010-12-01 08:23
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
 #       See http://rsontech.net/dotfiles/screenrc
@@ -158,7 +158,6 @@ bindkey "\e[B" history-search-forward
 #}}}
 
 # convenience keys {{{
-bindkey -s "^\\" " | less\n"
 bindkey "^J" push-line
 bindkey '^R' history-incremental-search-backward
 #}}}
