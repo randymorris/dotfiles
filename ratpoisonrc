@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  2009-09-30 22:17
-# MODIFIED: 2010-06-21 21:20
+# MODIFIED: 2011-02-24 16:17
 #
 
 # globals
@@ -85,7 +85,6 @@ alias ! exec
 exec ratpoison -c 'source .ratpoisonrc.unbinds' &
 
 # auto exec
-exec xmodmap -e "keycode 64 = F14" &
 exec unclutter -idle 5 -jitter 2 -root &
 exec xsetroot -solid '#1c1c1c' -cursor_name left_ptr &
 exec ratpoison -c 'gnew two' -c 'gnew three' -c 'gnew four' -c 'gselect 0' -c 'banish' -c 'exec term' -c 'next' &
