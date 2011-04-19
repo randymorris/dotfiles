@@ -7,17 +7,15 @@ keycode 160 = XF86AudioMute
 keycode 144 = XF86AudioPrev
 keycode 153 = XF86AudioNext
 
-! Get rid of stupid ass menu key
-keycode 117 =
-
-! Make capslock useful
-remove Lock = Caps_Lock
-keysym Caps_Lock = Escape
-
-! Swap mod1 and mod4
+! Shuffle Alt keys around
+! End game is to have mod1 on Super_L and Menu,
+! F13 on Alt_R and F14 on Alt_L
 remove mod1 = Alt_L
+remove mod1 = Alt_R
 remove mod4 = Super_L
-keycode 64 = Super_L
-keycode 115 = Alt_L
-add mod1 = Alt_L
-add mod4 = Super_L
+keysym Super_L = Alt_L
+keysym Alt_L = Super_L
+add mod1 = Super_L
+add mod1 = Menu
+keysym Alt_L = F14
+keysym Alt_R = F13
