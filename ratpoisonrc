@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  2009-09-30 22:17
-# MODIFIED: 2011-02-24 16:17
+# MODIFIED: 2011-04-18 19:11
 #
 
 # globals
@@ -27,7 +27,7 @@ set winname class
 set wingravity c
 
 # general
-bind c kill
+bind c delete
 bind Escape banish
 bind u undo
 bind C-r redo
@@ -73,13 +73,12 @@ bind N focus
 
 # commands
 bind colon colon
-bind semicolon colon ! 
+bind semicolon colon exec 
 bind s-semicolon colon exec term -e 
 
 # aliases
 alias sp split
 alias vsp hsplit
-alias ! exec
 
 # unbind stuff
 exec ratpoison -c 'source .ratpoisonrc.unbinds' &
@@ -88,5 +87,13 @@ exec ratpoison -c 'source .ratpoisonrc.unbinds' &
 exec unclutter -idle 5 -jitter 2 -root &
 exec xsetroot -solid '#1c1c1c' -cursor_name left_ptr &
 exec ratpoison -c 'gnew two' -c 'gnew three' -c 'gnew four' -c 'gselect 0' -c 'banish' -c 'exec term' -c 'next' &
+
+# multimedia keys
+definekey top XF86AudioRaiseVolume exec amixer set Master 3%+ && ratpoison -c  "echo Master: $(amixer get Master | tail -1 | cut -d ' ' -f 7)"
+definekey top XF86AudioMute exec amixer set Master toggle
+definekey top XF86AudioLowerVolume exec amixer set Master 3%- && ratpoison -c  "echo Master: $(amixer get Master | tail -1 | cut -d ' ' -f 7)"
+definekey top S-XF86AudioRaiseVolume exec amixer set PCM 3%+ && ratpoison -c  "echo PCM: $(amixer get PCM | tail -1 | cut -d ' ' -f 7)"
+definekey top S-XF86AudioMute exec amixer set PCM toggle
+definekey top S-XF86AudioLowerVolume exec amixer set PCM 3%- && ratpoison -c  "echo PCM: $(amixer get PCM | tail -1 | cut -d ' ' -f 7)"
 
 # vim:foldlevel=1
