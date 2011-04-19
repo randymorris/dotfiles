@@ -3,10 +3,11 @@
 ! Randy Morris (rson451@gmail.com)
 !
 ! CREATED:  2008-06-01 08:00
-! MODIFIED: 2009-12-09 18:02
+! MODIFIED: 2011-04-19 16:03
 
 !urxvt settings {{{
-URxvt*font:             xft:Monaco:size=11:antialias=true
+!URxvt*font:             xft:Monaco:size=11:antialias=true
+URxvt*font:             xft:Glass TTY VT220:size=15:antialias=true
 URxvt*background:       #1c1c1c
 URxvt*foreground:       #cccccc
 URxvt*scrollBar:        false
