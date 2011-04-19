@@ -3,7 +3,7 @@
 # Randy Morris (rson451@gmail.com)
 #
 # CREATED:  a long time ago
-# MODIFIED: 2010-12-01 08:23
+# MODIFIED: 2011-03-15 17:13
 #
 # Note: This file closely ties in with my screenrc for the screen title stuff.
 #       See http://rsontech.net/dotfiles/screenrc
@@ -28,10 +28,8 @@ export EDITOR=/usr/bin/vim
 
 # aliases {{{
 alias ls='ls --color=auto'
-alias tree='tree -L 1 -C'
 alias :q='exit'
 alias sudo='command sudo '
-alias shop='shop --pad 12'
 alias gmutt='mutt -F $HOME/.muttrc.personal'
 alias gitt='git ls-files -toc'
 alias .f='cd ~/.config/dotfiles/'

@@ -1,28 +1,3 @@
-[submodule "vim/bundle/supertab"]
-	path = vim/bundle/supertab
-	url = http://github.com/ervandew/supertab.git
-	ignore = untracked
-[submodule "vim/bundle/pathogen"]
-	path = vim/bundle/pathogen
-	url = http://github.com/tpope/vim-pathogen.git
-	ignore = untracked
-[submodule "vim/bundle/markdown"]
-	path = vim/bundle/markdown
-	url = http://github.com/tpope/vim-markdown.git
-	ignore = untracked
-[submodule "vim/bundle/snipmate"]
-	path = vim/bundle/snipmate
-	url = http://github.com/msanders/snipmate.vim.git
-	ignore = untracked
-[submodule "vim/bundle/gundo"]
-	path = vim/bundle/gundo
-	url = http://github.com/sjl/gundo.vim.git
-	ignore = untracked
-[submodule "vim/bundle/nerdcommenter"]
-	path = vim/bundle/nerdcommenter
-	url = http://github.com/scrooloose/nerdcommenter.git
-	ignore = untracked
-[submodule "vim/bundle/matchit"]
-	path = vim/bundle/matchit
-	url = http://github.com/vim-scripts/matchit.zip.git
-	ignore = untracked
+[submodule "vim/vundle"]
+	path = vim/vundle
+	url = http://github.com/gmarik/vundle
