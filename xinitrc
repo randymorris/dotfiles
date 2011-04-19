@@ -1,5 +1,6 @@
 #!/bin/bash
 
+exec /usr/bin/setxkbmap -option caps:ctrl_modifier &
 exec /usr/bin/xmodmap ${HOME}/.Xmodmap &
 exec urxvtd -o &
 
@@ -12,6 +13,9 @@ then
 elif [[ $1 == "windows" ]]
 then
   exec ~/bin/startwinxp
+elif [[ $1 == "gnome" ]]
+then
+    exec ck-launch-session gnome-session
 else
   exec /usr/bin/ratpoison
 fi
